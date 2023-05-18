@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,900&display=swap');
+    body{
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+    }
+    a{
+        text-decoration: none;
+    }
+    .red{
+        color: #f33f3f;
+    }
+    .white{
+        color: white;
+    }
+    /* navbar css */
+    header{
+        position: sticky;
+        top: 0;
+    }
+    .navbar{
+        display: flex;
+        background-color: black;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 100px;
+    }
+    .navbar ul {
+        list-style-type: none;
+        display: flex;
+    }
+    .navbar ul li{
+        margin-left: 20px;
+    }
+    .navbar ul li a{
+        position: relative;
+        padding: 20px 20px;
+    }
+    .active{
+        position: relative;
+    }
+    .navbar ul li  a::before{
+        content: "";
+        position: absolute;
+        width: 0%;
+        background-color: #f33f3f;
+        height: 3px;
+        bottom: 0;
+        right: 0;
+        transition: 0.5s;
+    }
+    .navbar ul li a:hover::before{
+        width: 100%;
+        left: 0;
+    }
+    .active::before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        background-color: #f33f3f;
+        height: 3px;
+        bottom: 0;
+        right: 0;
+        transition: 0.5s;
+    }
+    
+    /* /banner css/ */
+    .banner{
+        padding: 180px 100px;
+        background-image: url("../images/bg-section.jpg");
+    }
+    .banner div {
+        text-align: center;
+    }
+    .banner div h1{
+        font-size: 60px;
+    }
+    /* /product section css/ */
+    .product{
+        padding: 50px 100px;
+    }
+    .section-heading{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid gray;
+    }
+    .section-heading h1{
+        font-size: 40px;
+        margin: 0;
+    }
+    /* /product item css/ */
+    .product-main{
+        display: flex;
+        justify-content: space-between;
+    }
+    .product-item{
+        width: 30%;
+        border:1px solid gray;
+        border-radius: 10px;
+        margin: 50px 0px;
+        box-shadow: 2px 2px 10px gray;
+    }
+    .product-item img{
+        border-radius: 10px 10px 0px 0px;
+    }
+    .flex-box{
+        display: flex;
+        justify-content: space-between;
+    }
+    .product-inner{
+        padding: 20px;
+    }
+    .flex-box h3{
+        margin: 0;
+    }
+    .flex-box ul{
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+    }
+    .flex-box ul li{
+        margin-right: 5px;
+    }
+    .flex-box button{
+        background-color: white;
+        border:1px solid #f33f3f;
+        padding: 0px 15px;
+        color: #f33f3f;
+        border-radius: 8px;
+    }
+    .flex-box button:hover{
+        background-color: #f33f3f;
+        color: white;
+    }
+    /* /about css/ */
+    .about{
+        padding: 50px 100px;
+    }
+    .about-main{
+        display: flex;
+        justify-content: space-between;
+    }
+    .about-text{
+        width: 50%;
+        padding-top: 50px;
+        padding-right: 10px;
+    }
+    .about-img{
+        padding-top: 50px;
+    }
+    .about-text h2{
+        color: #013f8b;
+    }
+    .about-text ul{
+        padding-left: 18px;
+    }
+    .about-btn{
+        padding: 15px 25px;
+        border:none;
+        background-color: #f33f3f;
+        border-radius: 8px;
+        color: white;
+    }
+    .about-btn:hover{
+        background-color: white;
+        border:1px solid  #f33f3f;
+        color:  #f33f3f;
+    }
+    /* /footer css/ */
+    footer{
+        padding: 30px 100px;
+        text-align: center;
+        border-top: 1px solid lightgray;
+    }
+    footer p{
+        margin: 0;
+    }</style>
+<head>
+	<!-- Meta Tags 
+	=====================================-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- site title
+	==================================== -->
+	<title>Web site</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<!-- Custom Style Sheet
+	==================================== -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<!-- Navbar
+	=========================== -->
+	<!-- <header> 
+		<nav class="navbar py-2">
+			<a href="">
+				<h1>
+					<span class="white">CODE</span>
+					<span class="red">FOR</span>
+					<span class="white">DESIGN</span>
+				</h1>
+			</a>
+			<ul class="m-0">
+				<li><a href="" class="white active">Home</a></li>
+				<li><a href="" class="white">Product</a></li>
+				<li><a href="about.html" class="white">About</a></li>
+				<li><a href="" class="white">Conatc</a></li>
+			</ul>
+		</nav>
+	</header>-->
+	<!-- Banner Section -->
+	<section class="banner">
+		<div>
+			<h2 class="red">Banner Section</h2>
+			<h1 class="white">NEW PRODUCT ON SALE</h1>
+		</div>
+	</section>
+	<!-- Product section -->
+	<section class="product">
+		<div class="section-heading">
+			<h1 class="red">Products</h1>
+			<a href="" class="red">View All</a>
+		</div>
+		<div class="product-main">
+			<div class="product-item">
+				<img src="https://cdn.shopify.com/s/files/1/0381/4277/1339/products/Root-Deep-Shampoo-0_1024x1024.jpg?v=1675683041" width="100%" height="220px">
+				<div class="product-inner">
+					<div class="flex-box">
+						<h3 class="red">Root Deep Shampoo 200 ML
+                           </h3>
+						<b>Rs 2300</b>
+					</div>
+					<p>Root deep shampoo is derived from natural, mild, sulphate free cleansers. It is blended with natural extracts to reduce hair fall, dandruff & scalp irritation. It also keeps your hair & scalp clean, light & lively.</p>
+					<div class="flex-box">
+						<ul>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+						</ul>
+						<button>Read more</button>
+					</div>
+				</div>
+			</div>
+			<div class="product-item">
+				<img src="https://www.sheopals.in/cdn/shop/products/OnionShampoo.png?v=1676288691" width="100%" height="220px">
+				<div class="product-inner">
+					<div class="flex-box">
+						<h3 class="red">	
+                            Red Onion Hair Fall Control Shampoo</h3>
+						<b>Rs 449</b>
+					</div>
+					<p>Sheopals Red Onion Shampoo helps you with hair growth, hair fall, hair loss, dandruff, dryness, scalp issues (buildup, itchy), split ends, hair thinning and dull hair...</p>
+					<div class="flex-box">
+						<ul>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+						</ul>
+						<button>Read more</button>
+					</div>
+				</div>
+			</div>
+			<div class="product-item">
+				<img src="https://www.sheopals.in/cdn/shop/products/Sheopals-Hair-oil-with-onion-shampoo1.jpg?v=1676523591" height="220px">
+				<div class="product-inner">
+					<div class="flex-box">
+						<h3 class="red">	
+                            Sheopals Hair Grow Kit - Hair Care Combo For Hair Growth</h3>
+						<b>Rs 2299</b>
+					</div>
+					<p>Sheopals Hair Grow Capsules are the best Ayurvedic capsules that fulfil the requirement of nutrients your...</p>
+					<div class="flex-box">
+						<ul>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+						</ul>
+						<button>Read more</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="product-main">
+			<div class="product-item">
+				<center><img src="https://rukminim1.flixcart.com/image/832/832/jvif0y80/shampoo/x/h/a/100-bringha-anti-hairfall-cleanser-shampoo-indulekha-original-imaeyzk8e5h7vyeu.jpeg?q=70" width="30%" height="220px"></center>
+				<div class="product-inner">
+					<div class="flex-box">
+						<h3 class="red">	
+                            Indulekha Bringha Anti Hair Fall Shampoo, 100ml</h3>
+						<b>Rs 139</b>
+					</div>
+					<p>
+                        About this product • Indulekha Bringha Shampoo is a Proprietary Ayurvedic Medicine for reducing Hair Fall. Every bottle of Indulekha Bringha shampoo is enriched with 9 Full ...
+                    </p>
+					<div class="flex-box">
+						<ul>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+						</ul>
+						<button>Read more</button>
+					</div>
+				</div>
+			</div>
+			<div class="product-item">
+				<img src="https://cdn.shopify.com/s/files/1/0058/7779/2832/files/tea-tree-shampoo-buy-1-get-1-juicy-chemistry-1_1024x1024.jpg?v=1683372717" width="100%" height="220px">
+				<div class="product-inner">
+					<div class="flex-box">
+						<h3 class="red">	
+                            Baobab, Rosemary and Tea Tree Shampoo (Buy 1 Get 1) </h3>
+						<b>Rs 850</b>
+					</div>
+					<p>This certified organic shampoo helps strengthen the hair follicles and improve scalp health. It is a gentle yet effective cleanser. This shampoo soothes an itchy and flaky scalp, while simultaneously nourishing both the scalp and hair</p>
+					<div class="flex-box">
+						<ul>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+						</ul>
+						<button>Read more</button>
+					</div>
+				</div>
+			</div>
+			<div class="product-item">
+				<img src="https://cdn.shopify.com/s/files/1/0428/8302/3012/products/AntiDandruffShampooCoverImages.jpg?v=1667539746" width="100%" height="220px">
+				<div class="product-inner">
+					<div class="flex-box">
+						<h3 class="red">
+                           
+                            Anti Dandruff Shampoo - Shampoo For Dandruff And Hairfall </h3>
+						<b>Rs 409</b>
+					</div>
+                    <p>
+                        Teenilicious Anti Dandruff Shampoo is an antimicrobial, antiseptic shampoo designed for the dandruff and flaky scalp conditions. It helps to regulate sebum production.
+                    </p>
+					
+					<div class="flex-box">
+						<ul>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+						</ul>
+						<button>Read more</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>

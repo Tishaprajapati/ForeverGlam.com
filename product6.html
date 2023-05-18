@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,900&display=swap');
+    body{
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+    }
+    a{
+        text-decoration: none;
+    }
+    .red{
+        color: #f33f3f;
+    }
+    .white{
+        color: white;
+    }
+    /* navbar css */
+    header{
+        position: sticky;
+        top: 0;
+    }
+    .navbar{
+        display: flex;
+        background-color: black;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 100px;
+    }
+    .navbar ul {
+        list-style-type: none;
+        display: flex;
+    }
+    .navbar ul li{
+        margin-left: 20px;
+    }
+    .navbar ul li a{
+        position: relative;
+        padding: 20px 20px;
+    }
+    .active{
+        position: relative;
+    }
+    .navbar ul li  a::before{
+        content: "";
+        position: absolute;
+        width: 0%;
+        background-color: #f33f3f;
+        height: 3px;
+        bottom: 0;
+        right: 0;
+        transition: 0.5s;
+    }
+    .navbar ul li a:hover::before{
+        width: 100%;
+        left: 0;
+    }
+    .active::before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        background-color: #f33f3f;
+        height: 3px;
+        bottom: 0;
+        right: 0;
+        transition: 0.5s;
+    }
+    
+    /* /banner css/ */
+    .banner{
+        padding: 180px 100px;
+        background-image: url("../images/bg-section.jpg");
+    }
+    .banner div {
+        text-align: center;
+    }
+    .banner div h1{
+        font-size: 60px;
+    }
+    /* /product section css/ */
+    .product{
+        padding: 50px 100px;
+    }
+    .section-heading{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid gray;
+    }
+    .section-heading h1{
+        font-size: 40px;
+        margin: 0;
+    }
+    /* /product item css/ */
+    .product-main{
+        display: flex;
+        justify-content: space-between;
+    }
+    .product-item{
+        width: 30%;
+        border:1px solid gray;
+        border-radius: 10px;
+        margin: 50px 0px;
+        box-shadow: 2px 2px 10px gray;
+    }
+    .product-item img{
+        border-radius: 10px 10px 0px 0px;
+    }
+    .flex-box{
+        display: flex;
+        justify-content: space-between;
+    }
+    .product-inner{
+        padding: 20px;
+    }
+    .flex-box h3{
+        margin: 0;
+    }
+    .flex-box ul{
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+    }
+    .flex-box ul li{
+        margin-right: 5px;
+    }
+    .flex-box button{
+        background-color: white;
+        border:1px solid #f33f3f;
+        padding: 0px 15px;
+        color: #f33f3f;
+        border-radius: 8px;
+    }
+    .flex-box button:hover{
+        background-color: #f33f3f;
+        color: white;
+    }
+    /* /about css/ */
+    .about{
+        padding: 50px 100px;
+    }
+    .about-main{
+        display: flex;
+        justify-content: space-between;
+    }
+    .about-text{
+        width: 50%;
+        padding-top: 50px;
+        padding-right: 10px;
+    }
+    .about-img{
+        padding-top: 50px;
+    }
+    .about-text h2{
+        color: #013f8b;
+    }
+    .about-text ul{
+        padding-left: 18px;
+    }
+    .about-btn{
+        padding: 15px 25px;
+        border:none;
+        background-color: #f33f3f;
+        border-radius: 8px;
+        color: white;
+    }
+    .about-btn:hover{
+        background-color: white;
+        border:1px solid  #f33f3f;
+        color:  #f33f3f;
+    }
+    /* /footer css/ */
+    footer{
+        padding: 30px 100px;
+        text-align: center;
+        border-top: 1px solid lightgray;
+    }
+    footer p{
+        margin: 0;
+    }</style>
+<head>
+	<!-- Meta Tags 
+	=====================================-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- site title
+	==================================== -->
+	<title>Web site</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<!-- Custom Style Sheet
+	==================================== -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<!-- Navbar
+	=========================== -->
+	<!-- <header> 
+		<nav class="navbar py-2">
+			<a href="">
+				<h1>
+					<span class="white">CODE</span>
+					<span class="red">FOR</span>
+					<span class="white">DESIGN</span>
+				</h1>
+			</a>
+			<ul class="m-0">
+				<li><a href="" class="white active">Home</a></li>
+				<li><a href="" class="white">Product</a></li>
+				<li><a href="about.html" class="white">About</a></li>
+				<li><a href="" class="white">Conatc</a></li>
+			</ul>
+		</nav>
+	</header>-->
+	<!-- Banner Section -->
+	<section class="banner">
+		<div>
+			<h2 class="red">Banner Section</h2>
+			<h1 class="white">NEW PRODUCT ON SALE</h1>
+		</div>
+	</section>
+	<!-- Product section -->
+	<section class="product">
+		<div class="section-heading">
+			<h1 class="red">Products</h1>
+			<a href="" class="red">View All</a>
+		</div>
+		<div class="product-main">
+			<div class="product-item">
+				<center><img src="https://www.esteelauder.in/media/export/cms/products/558x768/el_sku_PGF501_558x768_0.jpg" width="50%" height="220px"></center>
+				<div class="product-inner">
+					<div class="flex-box">
+						<h3 class="red">DayWear
+                           </h3>
+						<b>Rs 1490</b>
+					</div>
+					<p>AN ULTRA-LIGHT, ULTRA-REFRESHING MOISTURIZER THAT DELIVERS 72-HOUR HYDRATION AND POWERFUL PROTECTION WITH ANTI-OXIDANTS AND BROAD-</p>
+					<div class="flex-box">
+						<ul>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+						</ul>
+						<button>Read more</button>
+					</div>
+				</div>
+			</div>
+			<div class="product-item">
+				<img src="https://cdn.shopify.com/s/files/1/0572/9576/5713/products/Tan-removal-facewash-flawless-skin-gel-ingredients-1000x.jpg?v=1636127442&width=1000" width="100%" height="220px">
+				<div class="product-inner">
+					<div class="flex-box">
+						<h3 class="red">	
+                            Facial Regime<br><br></h3>
+						<b>Rs 794</b>
+					</div>
+					<p>Saffron, turmeric and niacinamide...<br><br></p>
+					<div class="flex-box">
+						<ul>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+						</ul>
+						<button>Read more</button>
+					</div>
+				</div>
+			</div>
+			<div class="product-item">
+				<img src="https://cdn.shopify.com/s/files/1/0507/5422/4277/products/SMOOTHIEGREEN1.png?v=1678777066&width=990" width="100%" height="220px">
+				<div class="product-inner">
+					<div class="flex-box">
+						<h3 class="red">	
+                            Smoothie Green 200 ML</h3>
+						<b>Rs 712</b>
+					</div>
+					<p>FOR NORMAL TO OILY SKIN<br>
+
+                        Green clay, minerals, Apricot and Clary Sage oils, suspended in pure Aloe Vera, work gently to purify your skin of toxins and pollutants while balancing and supplementing your skin’s oils, without stripping it of its protective barrier, the acid mantle. Your skin feels soft, dewy, clean and nourished.</p>
+					<div class="flex-box">
+						<ul>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+						</ul>
+						<button>Read more</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="product-main">
+			<div class="product-item">
+				<img src="https://cdn.shopify.com/s/files/1/0578/2480/5033/products/11_1_640x683.jpg?v=1658827907" width="100%" height="220px">
+				<div class="product-inner">
+					<div class="flex-box">
+						<h3 class="red">ILLUMINATING FACE OIL<br><br></h3>
+						<b>Rs 1799</b>
+					</div>
+					<p>
+                        BOOSTS SKIN HEALTH AND MAKES IT RADIANT, REPLENISHED & REJUVENATED<br><br>
+                    </p>
+					<div class="flex-box">
+						<ul>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+						</ul>
+						<button>Read more</button>
+					</div>
+				</div>
+			</div>
+			<div class="product-item">
+				<img src="https://cdn.shopify.com/s/files/1/0609/6096/4855/products/WebsiteFirstimage-11.jpg?v=1679395208&width=700" width="100%" height="220px">
+				<div class="product-inner">
+					<div class="flex-box">
+						<h3 class="red">	
+                            Overnight Glow Mask with Glycolic and Lactic Acid<br><br> </h3>
+						<b>Rs 1165</b>
+					</div>
+					<p>For salon-like brightening facial overnight<br><br></p>
+					<div class="flex-box">
+						<ul>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+						</ul>
+						<button>Read more</button>
+					</div>
+				</div>
+			</div>
+			<div class="product-item">
+				<center><img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcR2ew0gP5tIR7G7EYG3IammwaCtColflxHgxqAvE-AqvO1Z1v97plvQI2go_po_xRJP-1a43QCP5-6Pc0XCJ5XkDgMG5X3fJHeKH8f3l4gYlfLYxb0_kHgUdA"  width="80%" height="220px"></center>
+					<div class="flex-box">
+						<h3 class="red">
+                           
+                            Lakme Blush & <br>Glow Strawberry Sheet Mask, 25 ml<br></h3>
+						<b>Rs 85</b>
+					</div>
+					<p>
+                        If you are facing dull, dry, patchy skin that is yearning for some hydration that is infused with the goodness of your favourite fruits. If your skin wants to get a glow that feels like a fruit facial ...
+                    </p>
+					<div class="flex-box">
+						<ul>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+						</ul>
+						<button>Read more</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>

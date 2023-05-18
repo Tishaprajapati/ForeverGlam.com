@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="loginpage.css">
+    <script src="login.js"></script>
+    
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+
+    <div class="hero">
+        <div class="navbar">
+            <img src="foreverlogo.png">
+            <ul>
+               
+                
+                <li><a href="index.html">home</a></li>
+                <li><a href="aboutus.html" >about us</a></li>
+                <li><a href="products.html">products</a></li>
+                <li><a href="service.html">services</a></li>
+                <li><a href="contactus.html">contact us</a></li>
+                 
+                
+              </ul>      
+                  
+                </div>
+				</div>
+    <div class="container">
+        <div class="form-box">
+            <h1 id="title">Sign Up</h1>
+            <form>
+            <div class="input-group" >
+                <div class="input-feild" id="nameFeild">
+                    <i class="fa-solid fa-user"></i>
+                    
+                    <input type="text" id="nameInput" placeholder="Name">
+                </div>
+
+                <div class="input-feild">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" id="emailInput" placeholder="Email">
+                </div>
+
+                <div class="input-feild">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" id="passwordInput" placeholder="Password">
+                </div>
+
+                <p> Forgot Password ?|<a href="#">    Click Here</a><br><br></p>
+
+                <div class="submit">
+                    <button id="subButton" onclick="validateInput()">Submit</button><br><br><br><br>
+                </div>
+            </div>
+
+           
+            <p id="message"></p>
+        
+            <script src="java.js"></script>
+           
+          
+            <div class="btn-feild">
+                <button type="button" id="signupbtn">Sign Up</button>
+                <button type="button" id="signinbtn" class="disable">Sign In</button>
+            </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        let signupbtn = document.getElementById("signupbtn");
+        let signinbtn = document.getElementById("signinbtn");
+        let nameFeild = document.getElementById("nameFeild");
+      
+        // let signgupbutton = document.getElementById("signupbutton");
+        let title = document.getElementById("title");
+        signinbtn.onclick = function(){
+            nameFeild.style.maxHeight="0";
+            title.innerHTML="Sign In";
+            sighupbtn.classList.add("disable");
+            sighinbtn.classList.remove("disable");
+           
+        }
+        signupbtn.onclick = function(){
+            nameFeild.style.maxHeight="60px";
+            
+            title.innerHTML="Sign Up";
+          
+            sighupbtn.classList.remove("disable");
+            sighinbtn.classList.add("disable");
+            
+
+            // loginbutton.classList.add("disable");
+            // signgupbutton.classList.remove("disable");
+        }
+    </script>
+</body>
+</html>

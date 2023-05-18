@@ -1,0 +1,137 @@
+
+  body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, rgba(245, 40, 98, 0.5) 0%, rgba(244, 242, 242, 0.5) 100%),url(https://img.freepik.com/free-photo/top-view-assortment-with-make-up-brushes-palettes_23-2148301886.jpg?w=900&t=st=1684048164~exp=1684048764~hmac=fe7ef9b3f8f089028552e6a975ac03e6af9d2421d96311039b773b93f7e69aa0);
+    -webkit-background-size:cover;
+    background-size: cover;
+    background-position: center center;
+    height: 90vh;
+    font-family: poppins;
+}
+
+.hero
+{
+    width: 80%;
+    margin: auto;
+}
+.navbar
+{
+    margin:30px auto ;
+    display: flex;
+    align-items: center;
+}
+
+ul
+{
+    flex: 1;
+    text-align: right;
+    
+}
+ul h1{
+    text-align: right;
+    color: #040404;
+    margin: 15px;
+    font-size: 35px;
+}
+ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 0 20px;
+}
+ul li a{
+    text-decoration: none;
+    color: #ffffff;
+    padding: 0 10px;
+    position: relative;
+}
+ul li a::after{
+    content: '';
+    width: 0%;
+    height: 10px;
+    background: #fcfcfc;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -25px;
+    transition: 0.5s;
+}
+ul li a:hover::after{
+    width: 100%;
+}
+   
+.wrapper{
+    width: 1170px;
+    height: 500px;
+    margin: 5% auto;
+    margin-bottom: 40%;
+}
+.wrapper h2{
+    text-transform: uppercase;
+    font-family: poppins;
+    font-weight: bold;
+    text-align: center;
+    font-size: 60px;
+    color: #fcfcfc;
+    margin: 0;
+}
+.single-service {
+position: relative;
+width: 31%;
+height: 320px;
+background: #fff;
+box-sizing: border-box;
+padding: 0 15px;
+transition: .5s;
+overflow: hidden;
+float: left;
+margin: 0 10px;
+text-align: center;
+}
+.line {
+width: 150px;
+height: 3px;
+background: #fff;
+margin: 0 auto 60px auto;
+}
+.single-service p{            
+    color: #262626;
+    font-size: 20px;
+}
+.single-service h3 {
+    font-size: 35px;
+    text-transform: uppercase;
+    font-family: poppins;
+    letter-spacing: 1px;
+    color: #262626;
+}
+
+.single-service:hover{
+    box-shadow: 0 30px 35px rgba(0,0,0,0.7);
+}
+.single-service span {
+position: absolute;
+top: 0;
+left: -110%;
+width: 100%;
+height: 100%;
+background: rgba(0,0,0,0.7);
+transition: .7s;
+transform: skewX(10deg);
+}
+.single-service:hover span{
+    left: 110%;
+}
+
+@media (max-width:1000px){
+    .wrapper {
+width: 100%;
+}
+.single-service {
+width: 95%;
+margin-bottom: 30px;
+}
+.wrapper h2 {
+font-size: 30px;
+}
+}

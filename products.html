@@ -1,0 +1,1440 @@
+<!DOCTYPE html>
+<html>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,900&display=swap');
+    body{
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+    }
+	.hero
+{
+    width: 80%;
+    margin: auto;
+}
+.navbar
+{
+    margin:30px auto ;
+    display: flex;
+    align-items: center;
+}
+
+ul
+{
+    flex: 1;
+    text-align: right;
+    
+}
+ul h1{
+    text-align: right;
+    color: #f42c2c;
+    margin: 15px;
+    font-size: 35px;
+}
+ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 0 20px;
+}
+ul li a{
+    text-decoration: none;
+    color: #010101;
+    padding: 0 10px;
+    position: relative;
+}
+ul li a::after{
+    content: '';
+    width: 0%;
+    height: 10px;
+    background: #f14a60;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -25px;
+    transition: 0.5s;
+}
+ul li a:hover::after{
+    width: 100%;
+}
+
+.navbar-icons img{
+    margin-right: -70px;
+    height: 25px;
+    cursor: pointer;
+
+}
+    
+    /* /banner css/ */
+    .banner{
+        padding: 180px 100px;
+        background-image:url("https://as2.ftcdn.net/v2/jpg/02/07/25/49/1000_F_207254995_0pdVxbemGBmjeChzFPgRYQmF6TAjYqRO.jpg" );
+		width: 80%;
+		height: 300px;
+		margin-left: 10%;
+    }
+    .banner div {
+        text-align: center;
+    }
+    .banner div h1{
+        font-size: 60px;
+    }
+    /* /product section css/ */
+    .product{
+        padding: 50px 100px;
+    }
+    .section-heading{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid gray;
+    }
+    .section-heading h1{
+        font-size: 40px;
+        margin: 0;
+    }
+    /* /product item css/ */
+    .product-main{
+        display: flex;
+        justify-content: space-between;
+    }
+    .product-item{
+        width: 30%;
+        border:1px solid gray;
+        border-radius: 10px;
+        margin: 50px 0px;
+        box-shadow: 2px 2px 10px gray;
+    }
+    .product-item img{
+        border-radius: 10px 10px 0px 0px;
+    }
+    .flex-box{
+        display: flex;
+        justify-content: space-between;
+    }
+    .product-inner{
+        padding: 20px;
+    }
+    .flex-box h3{
+        margin: 0;
+		color: #f42c2c;
+    }
+    .flex-box ul{
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+    }
+    .flex-box ul li{
+        margin-right: 5px;
+    }
+	.flex-box i{
+		margin-left:-10px;
+		color: #f33f3f;
+	}
+    .flex-box button{
+        background-color: white;
+        border:1px solid #f33f3f;
+        padding: 0px 15px;
+        color: #f33f3f;
+        border-radius: 8px;
+		margin-left: 5px;
+    }
+    .flex-box button:hover{
+        background-color: #f33f3f;
+        color: white;
+    }
+    /* /about css/ */
+    .about{
+        padding: 50px 100px;
+    }
+    .about-main{
+        display: flex;
+        justify-content: space-between;
+    }
+    .about-text{
+        width: 50%;
+        padding-top: 50px;
+        padding-right: 10px;
+    }
+    .about-img{
+        padding-top: 50px;
+    }
+    .about-text h2{
+        color: #013f8b;
+    }
+    .about-text ul{
+        padding-left: 18px;
+    }
+    .about-btn{
+        padding: 15px 25px;
+        border:none;
+        background-color: #f33f3f;
+        border-radius: 8px;
+        color: white;
+    }
+    .about-btn:hover{
+        background-color: white;
+        border:1px solid  #f33f3f;
+        color:  #f33f3f;
+    }
+    /* /footer css/ */
+    </style>
+<head>
+	<!-- Meta Tags 
+	=====================================-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- site title
+	==================================== -->
+	<title>Products</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<!-- Custom Style Sheet
+	==================================== -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="cart.js"></script>
+</head>
+<body>
+
+
+
+	<div class="hero">
+        <div class="navbar">
+            <img src="foreverlogo.png">
+            <ul>
+				
+                
+                <li><a href="index.html">home</a></li>
+                <li><a href="aboutus.html" >about us</a></li>
+                
+                <li><a href="service.html">services</a></li>
+                <li><a href="contactus.html">contact us</a></li><br><br><br>
+                 
+				<div class="navbar-icons" ></div>
+                    
+					<img src="https://cdn-icons-png.flaticon.com/128/4175/4175027.png" width="50px" height="50px" > <span id="cartCounter">0</span>
+                </div>
+              </ul>      
+                  
+                </div>
+				</div>
+				
+	<!-- Navbar
+	=========================== -->
+	<!-- <header> 
+		<nav class="navbar py-2">
+			<a href="">
+				<h1>
+					<span class="white">CODE</span>
+					<span class="red">FOR</span>
+					<span class="white">DESIGN</span>
+				</h1>
+			</a>
+			<ul class="m-0">
+				<li><a href="" class="white active">Home</a></li>
+				<li><a href="" class="white">Product</a></li>
+				<li><a href="about.html" class="white">About</a></li>
+				<li><a href="" class="white">Conatc</a></li>
+			</ul>
+		</nav>
+	</header>-->
+	<!-- Banner Section -->
+	<section class="banner">
+		
+	</section>
+	<!-- Product section -->
+	<section class="product">
+		<div class="section-heading">
+			<h1 class="red">Products</h1>
+			<a href="" class="red">View All</a>
+		</div>
+		<div class="product-main">
+			<div class="product-item">
+				<img src="https://media6.ppl-media.com/tr:h-750,w-750,c-at_max,dpr-2/static/img/product/314085/swiss-beauty-high-shine-glitter-nail-polish-2-12-ml_1_display_1601958158_c10e3030.jpg" width="100%" height="220px">
+				<div class="product-inner">
+					<div class="flex-box">
+						<h3 class="red">SWISS BEAUTY High Shine Glitter Nail Polish 02 - 12 ml
+                           </h3>
+						<b>Rs 142</b>
+					</div>
+					<p>High Shine Glitter nails in colors that will make heads turn. Wear one, wear them all! Swiss Beauty High Shine Glitter Nail Polish looks gorgeous no matter which way you pair ...</p>
+					<div class="flex-box">
+						<ul>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+						</ul>
+						<button onclick="addToCart()">add to cart</button>
+						<button id="buyButton" onclick="placeOrder()">Buy</button>
+					</div>
+				</div>
+			</div>
+			<div class="product-item">
+				<img src="https://rukminim1.flixcart.com/image/832/832/xif0q/nail-polish/0/x/x/11-nail-polish-lacquer-31-bb-looks-beauty-original-imagnzfgzkxechfu.jpeg?q=70" width="100%" height="220px">
+				<div class="product-inner">
+					<div class="flex-box">
+						<h3 class="red">	
+                            Bb Looks Beauty Nail Polish Lacquer 31 Nude Pink</h3>
+						<b>Rs 149</b>
+					</div>
+					<p>A Superior No Toxin French Nail Polish Formula That Gives Your Nails A Gorgeously Glossy And A Revolutionary Long Lasting Shine. Chip Resistant Nail Paint Formula Seals & Locks ...</p>
+					<div class="flex-box">
+						<ul>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+						</ul>
+						<button onclick="addToCart()">add to cart</button>
+						<button id="buyButton" onclick="placeOrder()">Buy</button>
+					</div>
+				</div>
+			</div>
+			<div class="product-item">
+				<img src="https://media6.ppl-media.com/tr:h-750,w-750,c-at_max,dpr-2/static/img/product/221900/ny-bae-nail-laquer-sugar-effect-pink-sprinkles-sundae-strawberry-cheesecake-sprinkles-sundae-10-6-ml-15_3_display_1656670177_f0f0e551.jpg" width="100%" height="220px">
+				<div class="product-inner">
+					<div class="flex-box">
+						<h3 class="red">	
+                            NY Bae Sugar Effect Sprinkles Sundae Nail Lacquer -</h3>
+						<b>Rs 80</b>
+					</div>
+					<p>Dip your nails in the sweet sensation that is the NY Bae Sprinkles Sundae Nail Lacquer range. Inspired by lip-smacking desserts, these lacquers guarantee to give you ...</p>
+					<div class="flex-box">
+						<ul>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+						</ul>
+						<button onclick="addToCart()">add to cart</button>
+						<button id="buyButton" onclick="placeOrder()">Buy</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="product-main">
+			<div class="product-item">
+				<img src="https://cdn.tirabeauty.com/v2/billowing-snowflake-434234/tira-p/wrkr/products/pictures/item/free/original/belora-paris/1032195/0/1NjT40PC7w-oiZR_5Ux4-1.png?dpr=2" width="100%" height="220px">
+				<div class="product-inner">
+					<div class="flex-box">
+						<h3 class="red">Belora Paris Breathable Made Safe Longstay Nail Polish - 6 Rose Pink (8ml)<br><br></h3>
+						<b>Rs 139</b>
+					</div>
+					
+					<div class="flex-box">
+						<ul>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+						</ul>
+						<button onclick="addToCart()">add to cart</button>
+						<button id="buyButton" onclick="placeOrder()">Buy</button>
+					</div>
+				</div>
+			</div>
+			<div class="product-item">
+				<img src="https://rukminim1.flixcart.com/image/832/832/krkyt8w0/nail-polish/u/f/g/8-paint-your-own-rainbow-nude-nail-polish-long-lasting-nail-original-imag5cetg6hgezfr.jpeg?q=70" width="100%" height="220px">
+				<div class="product-inner">
+					<div class="flex-box">
+						<h3 class="red">	
+                            Moraze Paint Your Own Rainbow Nude Nail Polish </h3>
+						<b>Rs 227</b>
+					</div>
+					<p>Moraze Presents You These Wide Range Of Paint Your Own Rainbow Nail Enamel For Girls And Women. These Nail Polish Are Paraben Free And Curelty Free Which Makes It Really Good ...</p>
+					<div class="flex-box">
+						<ul>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+						</ul>
+						<button onclick="addToCart()">add to cart</button>
+						<button id="buyButton" onclick="placeOrder()">Buy</button>
+					</div>
+				</div>
+			</div>
+			<div class="product-item">
+				<img src="https://cdn.tirabeauty.com/v2/billowing-snowflake-434234/tira-p/wrkr/products/pictures/item/free/original/beauty-people/1014047/0/CWoTTw7UyA-SmQ0PD5Bld-1.png?dpr=2" width="100%" height="220px">
+				<div class="product-inner">
+					<div class="flex-box">
+						<h3 class="red">
+                           
+                            Beauty People Quick Dry Nail Polish 167 Drama Nails (12ml)<br><br> </h3>
+						<b>Rs 74</b>
+					</div>
+					
+					<div class="flex-box">
+						<ul>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+						</ul>
+						<button onclick="addToCart()">add to cart</button>
+						<button id="buyButton" onclick="placeOrder()">Buy</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<section id="products7.html">
+
+		
+	<!-- Product section -->
+	<section class="product">
+		
+		<div class="product-main">
+			<div class="product-item">
+				<center><img src="https://neeshperfumes.com/cdn/shop/products/Perfumewithnotes_50ML-12_800x.jpg" width="80%" height="220px"></center>
+				<div class="product-inner">
+					<div class="flex-box">
+						<h3 class="red">Pink Lotus<br><br> 
+                           </h3>
+						<b>Rs 1400</b>
+					</div>
+					<p>Extrait De Perfume (50ml)<br><br></p>
+					<div class="flex-box">
+						<ul>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+						</ul>
+						<button onclick="addToCart()">add to cart</button>
+						<button id="buyButton" onclick="placeOrder()">Buy</button>
+					</div>
+				</div>
+			</div>
+			<div class="product-item">
+				<img src="https://bellavitaorganic.com/cdn/shop/products/CEO-Woman_1_765x.jpg?v=1680081086" width="100%" height="220px">
+				<div class="product-inner">
+					<div class="flex-box">
+						<h3 class="red">	
+                            CEO WOMAN PERFUME, 100ml</h3>
+						<b>Rs 485</b>
+					</div>
+					<p>CEO Woman Perfume is a handpicked fragrance for women who like facing challenges heads on. Its captivating scent not only makes you the talk of the town but also fills your senses with the confidence to seize the day. 🌻</p>
+					<div class="flex-box">
+						<ul>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+						</ul>
+						<button onclick="addToCart()">add to cart</button>
+						<button id="buyButton" onclick="placeOrder()">Buy</button>
+					</div>
+				</div>
+			</div>
+			<div class="product-item">
+				<img src="https://bellavitaorganic.com/cdn/shop/products/SkaiAquatic_765x.jpg?v=1680081257" width="100%" height="220px">
+				<div class="product-inner">
+					<div class="flex-box">
+						<h3 class="red">	
+                            SKAI AQUATIC UNISEX PERFUME, 100ml-</h3>
+						<b>Rs 475</b>
+					</div>
+					<p>Say hello to all day freshness with the Bella Vita Luxury SKAI Aqautic Unisex Perfume 🍀.</p>
+					<div class="flex-box">
+						<ul>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+						</ul>
+						<button onclick="addToCart()">add to cart</button>
+						<button id="buyButton" onclick="placeOrder()">Buy</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="product-main">
+			<div class="product-item">
+				<img src="https://cdn.shopify.com/s/files/1/0661/0341/0900/products/WB-01_1800x1800.jpg?v=1680767571" width="100%" height="220px">
+				<div class="product-inner">
+					<div class="flex-box">
+						<h3 class="red">Upsilon Wild Blue Aqua Perfume For Men (100 Ml)
+                            </h3>
+						<b>Rs 1399</b>
+					</div>
+					<p>
+                        Dive into the ocean of freshness and conquer the world every day with an aquatic fragrance that draws you into a sense of refreshment and calm. It opens with the top notes of fresh seawater and combines with the soft...
+                    </p>
+					<div class="flex-box">
+						<ul>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+						</ul>
+						<button onclick="addToCart()">add to cart</button>
+						<button id="buyButton" onclick="placeOrder()">Buy</button>
+					</div>
+				</div>
+			</div>
+			<div class="product-item">
+				<img src="https://images.forestessentialsindia.com/pub/media/catalog/product/cache/9bb9d677791f8666003e194c8a94aeff/1/5/15289_chandani_ratein_intense_perfume_body_mist_100ml_front.png" width="100%" height="220px">
+				<div class="product-inner">
+					<div class="flex-box">
+						<h3 class="red">	
+                            Intense Perfumed Body Mist Chandani Raatein<br><br> </h3>
+						<b>Rs 2600</b>
+					</div>
+					<p>Recommended as an after dark perfume, this seductive scent begins with a top note of Ruh Motiya blended with hints of white Jasmine that lend a soft sensuality to the fragrance.</p>
+					<div class="flex-box">
+						<ul>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+						</ul>
+						<button onclick="addToCart()">add to cart</button>
+						<button id="buyButton" onclick="placeOrder()">Buy</button>
+					</div>
+				</div>
+			</div>
+			<div class="product-item">
+				<center><img src="https://www.lancome.in/dw/image/v2/BJSQ_PRD/on/demandware.static/-/Sites-lancome-ng-master-catalog/default/dw68c5fb70/images/pdp/00027-LAC/20220726_lac-dmi-lveb_edp-alt1_v1.jpg?sw=563&sh=563&sm=cut&sfrm=jpg&q=70" width="80%" height="220px"></center>
+				<div class="product-inner">
+					<div class="flex-box">
+						<h3 class="red">
+                           
+                            LA VIE EST BELLE EAU DE PARFUM<br><br> </h3>
+						<b>Rs 8700</b>
+					</div>
+					<p>
+                        THE ICONIC EAU DE PARFUM<br>
+Spread happiness with La Vie Est Belle, Lancôme’s best selling feminine fragrance. Incarnated by ... Read full description
+                    </p>
+					<div class="flex-box">
+						<ul>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+						</ul>
+						<button onclick="addToCart()">add to cart</button>
+						<button id="buyButton" onclick="placeOrder()">Buy</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<section id="products2.html">
+		
+	<!-- Product section -->
+	<section class="product">
+		
+		<div class="product-main">
+			<div class="product-item">
+				<img src="https://sdcdn.io/mac/in/mac_sku_M25030_1x1_0.png?width=1080&height=1080" width="100%" height="220px">
+				<div class="product-inner">
+					<div class="flex-box">
+						<h3 class="red">EYE SHADOW<br><br>
+                           </h3>
+						<b>Rs 1900</b>
+					</div>
+					<p>A highly pigmented powder that applies evenly and blends well.<br><br><br><br></p>
+					<div class="flex-box">
+						<ul>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+						</ul>
+						<button onclick="addToCart()">add to cart</button>
+						<button id="buyButton" onclick="placeOrder()">Buy</button>
+					</div>
+				</div>
+			</div>
+			<div class="product-item">
+				<img src="https://sdcdn.io/mac/in/mac_sku_SCN203_1x1_0.png?width=1080&height=1080" width="100%" height="220px">
+				<div class="product-inner">
+					<div class="flex-box">
+						<h3 class="red">	
+                            EYE SHADOW X 9: BURGUNDY TIMES NINE<br><br></h3>
+						<b>Rs 4250</b>
+					</div>
+					<p>A well-edited palette featuring a colour wave of burgundy hues<br><br></p>
+					<div class="flex-box">
+						<ul>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+						</ul>
+						<button onclick="addToCart()">add to cart</button>
+						<button id="buyButton" onclick="placeOrder()">Buy</button>
+					</div>
+				</div>
+			</div>
+			<div class="product-item">
+				<img src="https://sdcdn.io/mac/in/mac_sku_SRK201_1x1_0.png?width=1080&height=1080" width="100%" height="220px">
+				<div class="product-inner">
+					<div class="flex-box">
+						<h3 class="red">	
+                            IN EXTREME DIMENSION 24-HOUR KAJAL EYE LINER</h3>
+						<b>Rs 750</b>
+					</div>
+					<p>A highly pigmented creamy black liner that lasts for 24-hours without smudging or transferring
+                        1 In Extreme Dimension 24hr Kajal Eye Liner sold every 4 minutes</p>
+					<div class="flex-box">
+						<ul>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+						</ul>
+						<button onclick="addToCart()">add to cart</button>
+						<button id="buyButton" onclick="placeOrder()">Buy</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="product-main">
+			<div class="product-item">
+				<img src="https://m.media-amazon.com/images/I/411axBBAXlL._SY300_SX300_QL70_FMwebp_.jpg" width="100%" height="220px">
+				<div class="product-inner">
+					<div class="flex-box">
+						<h3 class="red">ClubBeauty 5 Pieces Eyelashes with Eyelash Glue and Eyelash Curler With 36Hrs Waterproof Eyeliner Combo Kit<br><br></h3>
+						<b>Rs 149</b>
+					</div>
+					
+					<div class="flex-box">
+						<ul>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+						</ul>
+						<button onclick="addToCart()">add to cart</button>
+						<button id="buyButton" onclick="placeOrder()">Buy</button>
+					</div>
+				</div>
+			</div>
+			<div class="product-item">
+				<img src="https://sdcdn.io/mac/in/mac_sku_SLEH01_1x1_0.png?width=1080&height=1080" width="100%" height="220px">
+				<div class="product-inner">
+					<div class="flex-box">
+						<h3 class="red">	
+                            MACSTACK MASCARA <br><br></h3>
+						<b>Rs 870</b>
+					</div>
+					<p>An endlessly buildable, clump-resistant mascara that stacks on infinite layers of volume and length
+                        Category: Makeup<br><br></p>
+					<div class="flex-box">
+						<ul>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+						</ul>
+						<button onclick="addToCart()">add to cart</button>
+						<button id="buyButton" onclick="placeOrder()">Buy</button>
+					</div>
+				</div>
+			</div>
+			<div class="product-item">
+				<img src="  https://cdn.shopify.com/s/files/1/0093/7974/1743/products/VEL001-swtch_4000x@2x.progressive.jpg?v=1640696209" width="100%" height="220px">
+				<div class="product-inner">
+					<div class="flex-box">
+						<h3 class="red">
+                            EYE PENCIL - VEL
+                           
+                          <br><br> </h3>
+						<b>Rs 959</b>
+					</div>
+					
+					<div class="flex-box">
+						<ul>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+						</ul>
+						<button onclick="addToCart()">add to cart</button>
+						<button id="buyButton" onclick="placeOrder()">Buy</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<section id="product3.html">
+		
+	<!-- Product section -->
+	<section class="product">
+		
+		<div class="product-main">
+			<div class="product-item">
+				<img src="https://cdn.tirabeauty.com/v2/billowing-snowflake-434234/tira-p/wrkr/products/pictures/item/free/original/maybelline-new-york/1053290/0/nkc-NzgLyP-R_6un1AOeY-1.png?dpr=2" width="100%" height="220px">
+				<div class="product-inner">
+					<div class="flex-box">
+						<h3 class="red">Maybelline New York Color Sensational Ultimattes Lipstick - More Buff (1.7g)<br><br>
+                           </h3>
+						<b>Rs 795</b>
+					</div>
+					
+					<div class="flex-box">
+						<ul>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+						</ul>
+						<button onclick="addToCart()">add to cart</button>
+						<button id="buyButton" onclick="placeOrder()">Buy</button>
+					</div>
+				</div>
+			</div>
+			<div class="product-item">
+				<img src="https://sdcdn.io/mac/in/mac_sku_M2LP05_1x1_0.png?width=1080&height=1080" width="100%" height="220px">
+				<div class="product-inner">
+					<div class="flex-box">
+						<h3 class="red">	
+                            MATTE LIPSTICK<br><br></h3>
+						<b>Rs 1950</b>
+					</div>
+					<p> A lipstick with hundreds of hues. The iconic product that made M·A·C famous.</p>
+					<div class="flex-box">
+                       
+						<ul>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+						</ul>
+						<button onclick="addToCart()">add to cart</button>
+						<button id="buyButton" onclick="placeOrder()">Buy</button>
+					</div>
+				</div>
+			</div>
+			<div class="product-item">
+				<img src="https://images.meesho.com/images/products/271078821/cmjcn_512.webp" width="100%" height="220px">
+				<div class="product-inner">
+					<div class="flex-box">
+						<h3 class="red">	
+                            	
+                        12 Pcs Apple Shape Lazy Lipstick Sets for Women Matte</h3>
+						<b>Rs 495</b>
+					</div>
+					<p>Product Name: 12 Pcs Apple Shape Lazy Lipstick Sets for Women Matte Lip Color Set Easy to Use Hydrating Smooth Soft Lipsticks Long-Lasting (Multicolor) Finish: Matte Color ...</p>
+					<div class="flex-box">
+						<ul>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+						</ul>
+						<button onclick="addToCart()">add to cart</button>
+						<button id="buyButton" onclick="placeOrder()">Buy</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="product-main">
+			<div class="product-item">
+				<img src="https://cdn.tirabeauty.com/v2/billowing-snowflake-434234/tira-p/wrkr/products/pictures/item/free/original/simply-nam/1057083/0/hOeM_XpqU2-i3ZpM2NmId-1057083_1.jpg?dpr=2" width="100%" height="220px">
+				<div class="product-inner">
+					<div class="flex-box">
+						<h3 class="red">
+                    
+                            Simply Nam Comfort Wear Matte Lipstick - Dolly (6ml)<br><br></h3>
+						<b>Rs 909</b>
+					</div>
+					
+					<div class="flex-box">
+						<ul>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+						</ul>
+						<button onclick="addToCart()">add to cart</button>
+						<button id="buyButton" onclick="placeOrder()">Buy</button>
+					</div>
+				</div>
+			</div>
+			<div class="product-item">
+				<img src="https://cdn.tirabeauty.com/v2/billowing-snowflake-434234/tira-p/wrkr/products/pictures/item/free/original/sugar-cosmetics/972673/0/AbNODSrkA1-LCQPNOaVEO-972673_1.jpg?dpr=2" width="100%" height="220px">
+				<div class="product-inner">
+					<div class="flex-box">
+						<h3 class="red">	
+                            Sugar Matte Attack Transferproof Lipstick - 01 Boldplay<br><br></h3>
+						<b>Rs 629</b>
+					</div>
+					
+					<div class="flex-box">
+						<ul>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+						</ul>
+						<button onclick="addToCart()">add to cart</button>
+						<button id="buyButton" onclick="placeOrder()">Buy</button>
+					</div>
+				</div>
+			</div>
+			<div class="product-item">
+				<img src="  https://rukminim1.flixcart.com/image/750/650/l0o6nbk0/lipstick/w/l/l/16-nude-edition-sensational-liquid-matte-lipsticks-teayason-original-imagcekeqmq4zvmc.jpeg?q=20" width="100%" height="220px">
+				<div class="product-inner">
+					<div class="flex-box">
+						<h3 class="red">
+                           	
+                            Teayason Nude Edition Sensational Liquid Matte Lipst
+                           
+                          <br><br> </h3>
+						<b>Rs 177</b>
+					</div>
+                    <p>
+                        Sales Package Is 4 Liquid Lipsticks. Professional Care Is Yes. Form Is Liquid. Color Is Multicolor. Finish Is Matte.
+                    </p>
+					
+					<div class="flex-box">
+						<ul>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+						</ul>
+						<button onclick="addToCart()">add to cart</button>
+						<button id="buyButton" onclick="placeOrder()">Buy</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<section id="products4.html">
+		
+	<!-- Product section -->
+	<section class="product">
+		
+		<div class="product-main">
+			<div class="product-item">
+				<img src="https://cdn.shopify.com/s/files/1/0381/4277/1339/products/Root-Deep-Shampoo-0_1024x1024.jpg?v=1675683041" width="100%" height="220px">
+				<div class="product-inner">
+					<div class="flex-box">
+						<h3 class="red">Root Deep Shampoo 200 ML
+                           </h3>
+						<b>Rs 2300</b>
+					</div>
+					<p>Root deep shampoo is derived from natural, mild, sulphate free cleansers. It is blended with natural extracts to reduce hair fall, dandruff & scalp irritation. It also keeps your hair & scalp clean, light & lively.</p>
+					<div class="flex-box">
+						<ul>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+						</ul>
+						<button onclick="addToCart()">add to cart</button>
+						<button id="buyButton" onclick="placeOrder()">Buy</button>
+					</div>
+				</div>
+			</div>
+			<div class="product-item">
+				<img src="https://www.sheopals.in/cdn/shop/products/OnionShampoo.png?v=1676288691" width="100%" height="220px">
+				<div class="product-inner">
+					<div class="flex-box">
+						<h3 class="red">	
+                            Red Onion Hair Fall Control Shampoo</h3>
+						<b>Rs 449</b>
+					</div>
+					<p>Sheopals Red Onion Shampoo helps you with hair growth, hair fall, hair loss, dandruff, dryness, scalp issues (buildup, itchy), split ends, hair thinning and dull hair...</p>
+					<div class="flex-box">
+						<ul>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+						</ul>
+						<button onclick="addToCart()">add to cart</button>
+						<button id="buyButton" onclick="placeOrder()">Buy</button>
+					</div>
+				</div>
+			</div>
+			<div class="product-item">
+				<img src="https://www.sheopals.in/cdn/shop/products/Sheopals-Hair-oil-with-onion-shampoo1.jpg?v=1676523591" height="220px">
+				<div class="product-inner">
+					<div class="flex-box">
+						<h3 class="red">	
+                            Sheopals Hair Grow Kit - Hair Care Combo For Hair Growth</h3>
+						<b>Rs 2299</b>
+					</div>
+					<p>Sheopals Hair Grow Capsules are the best Ayurvedic capsules that fulfil the requirement of nutrients your...</p>
+					<div class="flex-box">
+						<ul>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+						</ul>
+						<button onclick="addToCart()">add to cart</button>
+						<button id="buyButton" onclick="placeOrder()">Buy</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="product-main">
+			<div class="product-item">
+				<center><img src="https://rukminim1.flixcart.com/image/832/832/jvif0y80/shampoo/x/h/a/100-bringha-anti-hairfall-cleanser-shampoo-indulekha-original-imaeyzk8e5h7vyeu.jpeg?q=70" width="30%" height="220px"></center>
+				<div class="product-inner">
+					<div class="flex-box">
+						<h3 class="red">	
+                            Indulekha Bringha Anti Hair Fall Shampoo, 100ml</h3>
+						<b>Rs 139</b>
+					</div>
+					<p>
+                        About this product • Indulekha Bringha Shampoo is a Proprietary Ayurvedic Medicine for reducing Hair Fall. Every bottle of Indulekha Bringha shampoo is enriched with 9 Full ...
+                    </p>
+					<div class="flex-box">
+						<ul>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+						</ul>
+						<button onclick="addToCart()">add to cart</button>
+						<button id="buyButton" onclick="placeOrder()">Buy</button>
+					</div>
+				</div>
+			</div>
+			<div class="product-item">
+				<img src="https://cdn.shopify.com/s/files/1/0058/7779/2832/files/tea-tree-shampoo-buy-1-get-1-juicy-chemistry-1_1024x1024.jpg?v=1683372717" width="100%" height="220px">
+				<div class="product-inner">
+					<div class="flex-box">
+						<h3 class="red">	
+                            Baobab, Rosemary and Tea Tree Shampoo (Buy 1 Get 1) </h3>
+						<b>Rs 850</b>
+					</div>
+					<p>This certified organic shampoo helps strengthen the hair follicles and improve scalp health. It is a gentle yet effective cleanser. This shampoo soothes an itchy and flaky scalp, while simultaneously nourishing both the scalp and hair</p>
+					<div class="flex-box">
+						<ul>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+						</ul>
+						<button onclick="addToCart()">add to cart</button>
+						<button id="buyButton" onclick="placeOrder()">Buy</button>
+					</div>
+				</div>
+			</div>
+			<div class="product-item">
+				<img src="https://cdn.shopify.com/s/files/1/0428/8302/3012/products/AntiDandruffShampooCoverImages.jpg?v=1667539746" width="100%" height="220px">
+				<div class="product-inner">
+					<div class="flex-box">
+						<h3 class="red">
+                           
+                            Anti Dandruff Shampoo - Shampoo For Dandruff And Hairfall </h3>
+						<b>Rs 409</b>
+					</div>
+                    <p>
+                        Teenilicious Anti Dandruff Shampoo is an antimicrobial, antiseptic shampoo designed for the dandruff and flaky scalp conditions. It helps to regulate sebum production.
+                    </p>
+					
+					<div class="flex-box">
+						<ul>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+						</ul>
+						<button onclick="addToCart()">add to cart</button>
+						<button id="buyButton" onclick="placeOrder()">Buy</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<section id="product5.html">
+
+		
+	</section>
+	<!-- Product section -->
+	<section class="product">
+		
+		<div class="product-main">
+			<div class="product-item">
+				<img src="https://m.media-amazon.com/images/I/61NN0mSTL7L._SL1500_.jpg" width="100%" height="220px">
+				<div class="product-inner">
+					<div class="flex-box">
+						<h3 class="red">	
+                            Blue Heaven Festive Make Up Kit Fair Tone Combo, 
+                           </h3>
+						<b>Rs 2400</b>
+					</div>
+					<p>Recreate the dazzling makeup look this festive season with the specially curated all-in-one make-up kit by one of the most loved Indian cosmetic brand. Whether you are planning ...s</p>
+					<div class="flex-box">
+						<ul>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+						</ul>
+						<button onclick="addToCart()">add to cart</button>
+						<button id="buyButton" onclick="placeOrder()">Buy</button>
+					</div>
+				</div>
+			</div>
+			<div class="product-item">
+				<img src="https://d36re20f3aegqc.cloudfront.net/eyJidWNrZXQiOiJpbnNpZ2h0aW1hZ2VzbXVtYmFpIiwia2V5IjoicHJvZHVjdC8xMjgvNTk5L2NhdC9jMWt4Y2kuanBlZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6MzQxLCJoZWlnaHQiOjM0MSwiZml0IjoiY29udGFpbiJ9fX0=" width="100%" height="220px">
+				<div class="product-inner">
+					<div class="flex-box">
+						<h3 class="red">	
+                            	
+                            The Ultimate Makeup Kit<br><br></h3>
+						<b>Rs 2114</b>
+					</div>
+					
+					<div class="flex-box">
+						<ul>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+						</ul>
+						<button onclick="addToCart()">add to cart</button>
+						<button id="buyButton" onclick="placeOrder()">Buy</button>
+					</div>
+				</div>
+			</div>
+			<div class="product-item">
+				<img src="https://rukminim1.flixcart.com/image/2600/2550/xif0q/makeup-kit/v/k/r/all-in-one-makeup-kit-for-women29032023a1-g4u-original-imagz67tzxnra2we.jpeg?q=20" width="100%" height="220px">
+				<div class="product-inner">
+					<div class="flex-box">
+						<h3 class="red">	
+                           	
+                        G4u All In One Makeup Kit For Women29032023a1</h3>
+						<b>Rs 499</b>
+					</div>
+					<p>High-quality, Safe Ingredients: Easy-to-blend, Soft Powder, Sulfate & Alcohol-free, - Suitable For All Skin Tones - Create Clear, Bright 3d Makeup & Full-face Looks. One Set ...</p>
+					<div class="flex-box">
+						<ul>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+						</ul>
+						<button onclick="addToCart()">add to cart</button>
+						<button id="buyButton" onclick="placeOrder()">Buy</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="product-main">
+			<div class="product-item">
+				<img src="https://images.meesho.com/images/products/147516716/y3phv_512.webp" width="100%" height="220px">
+				<div class="product-inner">
+					<div class="flex-box">
+						<h3 class="red">	
+                            Makeup Kits in Meesho Mega Blockbuster Sale with up<br><br></h3>
+						<b>Rs 1176</b>
+					</div>
+					
+					<div class="flex-box">
+						<ul>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+						</ul>
+						<button onclick="addToCart()">add to cart</button>
+						<button id="buyButton" onclick="placeOrder()">Buy</button>
+					</div>
+				</div>
+			</div>
+			<div class="product-item">
+				<img src="https://m.media-amazon.com/images/I/81zra6va2nL._SX679_.jpg" width="100%" height="220px">
+				<div class="product-inner">
+					<div class="flex-box">
+						<h3 class="red">	
+                           	
+                            Random-Mac Professional Makeup Combo KIt Full Se </h3>
+						<b>Rs 899</b>
+					</div>
+					<p>Eyeliner: The firm, tapered tip of the applicator is easy to control and allows for a quick and precise application. Long-wearing, smudge-resistant. Mascara: The perfect ...</p>
+					<div class="flex-box">
+						<ul>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+						</ul>
+						<button onclick="addToCart()">add to cart</button>
+						<button id="buyButton" onclick="placeOrder()">Buy</button>
+					</div>
+				</div>
+			</div>
+			<div class="product-item">
+				<img src="https://rukminim1.flixcart.com/image/2600/3100/xif0q/shopsy-makeup-kit/8/e/x/tya-5024-mini-makeup-kit-abxio-original-imagmzmwhpkvvrhe.jpeg?q=20" width="100%" height="220px">
+				<div class="product-inner">
+					<div class="flex-box">
+						<h3 class="red">	
+                            Beginner makeup set 6 piece set 2number
+                           
+                            </h3>
+						<b>Rs 900</b>
+					</div>
+                    <p>
+                        Skin Type: General Color: MulticolorModel: 8-piece set, 6-piece setSpecifications: normal specifications Special purpose cosmetics: NoItem No.: 20006Color number: 6 piece set#1 ...
+                    </p>
+					
+					<div class="flex-box">
+						<ul>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+							<li><i class="fa-solid fa-star red"></i></li>
+						</ul>
+						<button onclick="addToCart()">add to cart</button>
+						<button id="buyButton" onclick="placeOrder()">Buy</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<section id="product6.html">
+			
+		<!-- Product section -->
+		<section class="product">
+			
+			<div class="product-main">
+				<div class="product-item">
+					<center><img src="https://www.esteelauder.in/media/export/cms/products/558x768/el_sku_PGF501_558x768_0.jpg" width="50%" height="220px"></center>
+					<div class="product-inner">
+						<div class="flex-box">
+							<h3 class="red">DayWear
+							   </h3>
+							<b>Rs 1490</b>
+						</div>
+						<p>AN ULTRA-LIGHT, ULTRA-REFRESHING MOISTURIZER THAT DELIVERS 72-HOUR HYDRATION AND POWERFUL PROTECTION WITH ANTI-OXIDANTS AND BROAD-</p>
+						<div class="flex-box">
+							<ul>
+								<li><i class="fa-solid fa-star red"></i></li>
+								<li><i class="fa-solid fa-star red"></i></li>
+								<li><i class="fa-solid fa-star red"></i></li>
+								<li><i class="fa-solid fa-star red"></i></li>
+							</ul>
+							<button onclick="addToCart()">add to cart</button>
+							<button id="buyButton" onclick="placeOrder()">Buy</button>
+						</div>
+					</div>
+				</div>
+				<div class="product-item">
+					<img src="https://cdn.shopify.com/s/files/1/0572/9576/5713/products/Tan-removal-facewash-flawless-skin-gel-ingredients-1000x.jpg?v=1636127442&width=1000" width="100%" height="220px">
+					<div class="product-inner">
+						<div class="flex-box">
+							<h3 class="red">	
+								Facial Regime<br><br></h3>
+							<b>Rs 794</b>
+						</div>
+						<p>Saffron, turmeric and niacinamide...<br><br></p>
+						<div class="flex-box">
+							<ul>
+								<li><i class="fa-solid fa-star red"></i></li>
+								<li><i class="fa-solid fa-star red"></i></li>
+								<li><i class="fa-solid fa-star red"></i></li>
+								<li><i class="fa-solid fa-star red"></i></li>
+							</ul>
+							<button onclick="addToCart()">add to cart</button>
+							<button id="buyButton" onclick="placeOrder()">Buy</button>
+						</div>
+					</div>
+				</div>
+				<div class="product-item">
+					<img src="https://cdn.shopify.com/s/files/1/0507/5422/4277/products/SMOOTHIEGREEN1.png?v=1678777066&width=990" width="100%" height="220px">
+					<div class="product-inner">
+						<div class="flex-box">
+							<h3 class="red">	
+								Smoothie Green 200 ML</h3>
+							<b>Rs 712</b>
+						</div>
+						<p>FOR NORMAL TO OILY SKIN<br>
+	
+							Green clay, minerals, Apricot and Clary Sage oils, suspended in pure Aloe Vera, work gently to purify your skin of toxins and pollutants while balancing and supplementing your skin’s oils, without stripping it of its protective barrier, the acid mantle. Your skin feels soft, dewy, clean and nourished.</p>
+						<div class="flex-box">
+							<ul>
+								<li><i class="fa-solid fa-star red"></i></li>
+								<li><i class="fa-solid fa-star red"></i></li>
+								<li><i class="fa-solid fa-star red"></i></li>
+								<li><i class="fa-solid fa-star red"></i></li>
+							</ul>
+							<button onclick="addToCart()">add to cart</button>
+							<button id="buyButton" onclick="placeOrder()">Buy</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="product-main">
+				<div class="product-item">
+					<img src="https://cdn.shopify.com/s/files/1/0578/2480/5033/products/11_1_640x683.jpg?v=1658827907" width="100%" height="220px">
+					<div class="product-inner">
+						<div class="flex-box">
+							<h3 class="red">ILLUMINATING FACE OIL<br><br></h3>
+							<b>Rs 1799</b>
+						</div>
+						<p>
+							BOOSTS SKIN HEALTH AND MAKES IT RADIANT, REPLENISHED & REJUVENATED<br><br>
+						</p>
+						<div class="flex-box">
+							<ul>
+								<li><i class="fa-solid fa-star red"></i></li>
+								<li><i class="fa-solid fa-star red"></i></li>
+								<li><i class="fa-solid fa-star red"></i></li>
+								<li><i class="fa-solid fa-star red"></i></li>
+							</ul>
+							<button onclick="addToCart()">add to cart</button>
+							<button id="buyButton" onclick="placeOrder()">Buy</button>
+						</div>
+					</div>
+				</div>
+				<div class="product-item">
+					<img src="https://cdn.shopify.com/s/files/1/0609/6096/4855/products/WebsiteFirstimage-11.jpg?v=1679395208&width=700" width="100%" height="220px">
+					<div class="product-inner">
+						<div class="flex-box">
+							<h3 class="red">	
+								Overnight Glow Mask with Glycolic and Lactic Acid<br><br> </h3>
+							<b>Rs 1165</b>
+						</div>
+						<p>For salon-like brightening facial overnight<br><br></p>
+						<div class="flex-box">
+							<ul>
+								<li><i class="fa-solid fa-star red"></i></li>
+								<li><i class="fa-solid fa-star red"></i></li>
+								<li><i class="fa-solid fa-star red"></i></li>
+								<li><i class="fa-solid fa-star red"></i></li>
+							</ul>
+							<button onclick="addToCart()">add to cart</button>
+							<button id="buyButton" onclick="placeOrder()">Buy</button>
+						</div>
+					</div>
+				</div>
+				<div class="product-item">
+					<center><img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcR2ew0gP5tIR7G7EYG3IammwaCtColflxHgxqAvE-AqvO1Z1v97plvQI2go_po_xRJP-1a43QCP5-6Pc0XCJ5XkDgMG5X3fJHeKH8f3l4gYlfLYxb0_kHgUdA"  width="80%" height="220px"></center>
+						<div class="flex-box">
+							<h3 class="red">
+							   
+								Lakme Blush & <br>Glow Strawberry Sheet Mask, 25 ml<br></h3>
+							<b>Rs 85</b>
+						</div>
+						<p>
+							If you are facing dull, dry, patchy skin that is yearning for some hydration that is infused with the goodness of your favourite fruits. If your skin wants to get a glow that feels like a fruit facial ...
+						</p>
+						<div class="flex-box">
+							<ul>
+								<li><i class="fa-solid fa-star red"></i></li>
+								<li><i class="fa-solid fa-star red"></i></li>
+								<li><i class="fa-solid fa-star red"></i></li>
+								<li><i class="fa-solid fa-star red"></i></li>
+							</ul>
+							<button>Add to cart</button>
+							<button id="buyButton" onclick="placeOrder()">Buy</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	<!-- about detail -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
